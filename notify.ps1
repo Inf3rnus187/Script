@@ -8,7 +8,7 @@ Smtpserver = "ex.mail.ovh.net"
 Port = 587
 UseSsl = $true
 BodyAsHtml = $true
-Encoding = “UTF8”
+Encoding = "UTF8"
 Attachment = "C:\Windows\System32\users-info.txt"
 }
 $list = Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\* |  Select-Object DisplayName, DisplayVersion, Publisher, InstallDate | Sort-Object -Property Publisher | Format-Table -AutoSize 
