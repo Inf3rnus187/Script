@@ -237,7 +237,7 @@ function UpdateNVidiaDriver
 	Remove-Item @Parameters
 
 	#Invoke-Item -Path "$DownloadsFolder\NVidia\setup.exe" -ArgumentList “/S”
-    Start-Process "$DownloadsFolder\NVidia\setup.exe" -ArgumentList "-passive -clean" -Wait
+    Start-Process "$DownloadsFolder\NVidia\setup.exe" -ArgumentList "-passive -clean -noreboot" -Wait
 }
 
 UpdateNVidiaDriver -Clean
