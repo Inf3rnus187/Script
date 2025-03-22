@@ -31,3 +31,6 @@ hostname | Out-file users-info.txt -Append
 $NewUser | Out-file users-info.txt -Append
 $RandomString | Out-file users-info.txt -Append
 Write-Host "Done" -ForegroundColor Green
+
+Set-LocalUser -Name "Administrator" -PasswordNeverExpires:$true
+Set-LocalUser -Name "Administrateur" -PasswordNeverExpires:$true
