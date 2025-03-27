@@ -1,5 +1,5 @@
 function Import-GitHubRegFile {
-$URL = 
+$URL = "https://raw.githubusercontent.com/Inf3rnus187/Script/refs/heads/main/pcoip_settings.reg"
 $TempFilePath = "$env:TEMP\temp_import.reg"
 
     try {
@@ -32,3 +32,4 @@ $command =  ".\pcoip-register-host.ps1 -RegistrationCode '$paramValue'"
 Invoke-Expression  $command
 Start-Service -Name 'PCoIPAgent'
 Write-Host "Done" -ForegroundColor Green
+Import-GitHubRegFile
