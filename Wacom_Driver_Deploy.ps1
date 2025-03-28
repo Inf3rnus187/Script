@@ -11,3 +11,4 @@ Copy-Item -Path "$env:TEMP\PADT\Toolkit\Files" -Destination "$env:TEMP\WacomTabl
 
 Invoke-WebRequest -Uri "https://cdn.wacom.com/u/productsupport/drivers/win/professional/WacomTablet_6.4.9-2.exe" -OutFile "$env:TEMP\WacomTablet\Files\"
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Inf3rnus187/Script/refs/heads/main/Wacom_Tablet_Driver_Install_and_Uninstall.ps1" -OutFile "$env:TEMP\WacomTablet\Files\Deploy-WacomTablet.ps1"
+Start-Process powershell -ArgumentList "-ExecutionPolicy Bypass -File $env:TEMP\WacomTablet\Files\Deploy-WacomTablet.ps1" -Wait
