@@ -1,5 +1,5 @@
 
-Invoke-WebRequest -Uri "https://github.com/PSAppDeployToolkit/PSAppDeployToolkit/releases/download/3.8.4/PSAppDeployToolkit_v3.8.4.zip" -OutFile "$env:TEMP\psadt.zip"
+Invoke-WebRequest -Uri "https://github.com/PSAppDeployToolkit/PSAppDeployToolkit/releases/download/4.0.6/PSAppDeployToolkit_v4.0.6.zip" -OutFile "$env:TEMP\psadt.zip"
 
 Unblock-File -Path "$env:TEMP\psadt.zip"
 
