@@ -3,7 +3,7 @@ Invoke-WebRequest -Uri "https://github.com/PSAppDeployToolkit/PSAppDeployToolkit
 
 Unblock-File -Path "$env:TEMP\psadt.zip"
 
-Expand-Archive -Path "$env:TEMP\psadt.zip" -DestinationPath "$env:TEMP\PADT"
+Expand-Archive -Path "$env:TEMP\psadt.zip" -DestinationPath "$env:TEMP\PADT" -Force
 
 Copy-Item -Path "$env:TEMP\PADT\Toolkit\AppDeployToolkit" -Destination "$env:TEMP\WacomTablet\AppDeployToolkit" -Recurse
 Copy-Item -Path "$env:TEMP\PADT\Toolkit\Files" -Destination "$env:TEMP\WacomTablet\Files"
