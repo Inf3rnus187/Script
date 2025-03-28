@@ -22,7 +22,7 @@ $TempFilePath = "$env:TEMP\temp_import.reg"
 
 
 Write-Host "Installing PCoIP Graphic Agent" -ForegroundColor Green
-Invoke-WebRequest -Uri "https://github.com/Inf3rnus187/Script/raw/refs/heads/main/pcoip-agent-graphics_25.03.0.exe" -OutFile "$env:TEMP\pcoip.exe"
+Invoke-WebRequest -Uri "https://github.com/Inf3rnus187/Script/raw/refs/heads/main/pcoip-agent-graphics_latest.exe" -OutFile "$env:TEMP\pcoip.exe"
 $process = Start-Process -FilePath "$env:TEMP\pcoip.exe" -ArgumentList "/S /NoPostReboot _?$env:TEMP\pcoip.exe" -Wait -PassThru; $process.ExitCode
 Write-Host "Done" -ForegroundColor Green
 
