@@ -19,6 +19,6 @@ Import-Module PSAppDeployToolkit
 New-ADTTemplate -Destination 'C:\Temp' -Name 'WacomTablet' -Show
 Remove-Item -Path "C:\Temp\WacomTablet\Invoke-AppDeployToolkit.ps1" -Force
 
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Inf3rnus187/Script/refs/heads/main/Wacom_Tablet_Driver_Install_and_Uninstall.ps1" -OutFile "C:\Temp\WacomTablet\Invoke-AppDeployToolkit.ps1" -Force
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Inf3rnus187/Script/refs/heads/main/Wacom_Tablet_Driver_Install_and_Uninstall.ps1" -OutFile "C:\Temp\WacomTablet\Invoke-AppDeployToolkit.ps1"
 Invoke-WebRequest -Uri "https://cdn.wacom.com/u/productsupport/drivers/win/professional/WacomTablet_6.4.9-2.exe" -OutFile "C:\Temp\WacomTablet\Files\WacomTablet_6.4.9-2.exe"
 Powershell.exe -ExecutionPolicy Bypass C:\Temp\WacomTablet\Files\Invoke-AppDeployToolkit.ps1 -DeploymentType "Install" -DeployMode "NonInteractive"
